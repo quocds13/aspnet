@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@using aspnet.Models
+@{
+    ViewData["Title"] = "Home page";
+    var a =  ViewData["articles"] as List<Article>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Trang chủ</h1>
+</div>
+
+<ol>
+    @foreach (var item in a)
+    {
+        <li>@item.Title</li>
+    }
+
+</ol>
